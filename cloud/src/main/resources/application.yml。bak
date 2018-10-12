@@ -1,0 +1,5 @@
+#端口号
+server:
+  port: ${random.int[6666,7777]}
+
+msg: Hello world

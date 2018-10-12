@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>展示用户数据</title>
+</head>
+    <body>
+        <a th:href="@{/user/input}">添加用户</a>
+        <hr>
+        <table border="1" align="center" style="width: 80%">
+            <tr align="center">
+                <th>id</th>
+                <th>姓名</th>
+                <th>年龄</th>
+                <th>操作</th>
+            </tr>
+            <tr th:each="user : ${userList}" align="center">
+                <td th:text="${user.id}"></td>
+                <td th:text="${user.name}"></td>
+                <td th:text="${user.age}"></td>
+                <td><a th:href="@{/user/findById(id=${user.id})}">修改
+                </a>
+                    <a th:href="@{/user/deleteById(id=${user.id})}">删除
+                    </a>
+                </td>
+            </tr>
+        </table>
+
+    </body>
+</html>

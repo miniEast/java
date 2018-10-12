@@ -1,0 +1,10 @@
+#端口号
+server.port=${random.int[1024,9999]}
+
+#自定义
+name=孙晓东
+#随机数  只随机一次
+num=${random.int}
+msg=Hello SpringCloud ${num}  ${name}
+
+
